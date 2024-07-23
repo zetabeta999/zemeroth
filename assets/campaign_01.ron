@@ -1,0 +1,86 @@
+Plan(
+    initial_agents: [
+        "spearman",
+    ],
+    nodes: [
+        (
+            scenario: (
+                rocky_tiles_count: 0,
+                randomized_objects: [
+                    (owner: Some((1)), typename: "imp", line: Some(Front), count: 1),
+                ],
+            ),
+            award: (
+                recruits: ["spearman", "swordsman"],
+                renown: 17,
+            ),
+        ),
+        (
+            scenario: (
+                rocky_tiles_count: 0,
+                randomized_objects: [
+                    (owner: Some((1)), typename: "imp", line: Some(Front), count: 3),
+                ],
+            ),
+            award: (
+                recruits: ["swordsman", "alchemist"],
+                renown: 18,
+            ),
+        ),
+        (
+            scenario: (
+                rocky_tiles_count: 0,
+                randomized_objects: [
+                    (owner: Some((1)), typename: "imp", line: Some(Front), count: 3),
+                    (owner: Some((1)), typename: "imp_bomber", line: Some(Back), count: 1),
+                ],
+            ),
+            award: (
+                recruits: ["spearman", "hammerman"],
+                renown: 20,
+            ),
+        ),
+        (
+            scenario: (
+                rocky_tiles_count: 0,
+                randomized_objects: [
+                    (owner: Some((1)), typename: "imp", line: Some(Front), count: 3),
+                    (owner: Some((1)), typename: "imp_bomber", line: Some(Back), count: 1),
+                    (owner: Some((1)), typename: "toxic_imp", line: Some(Middle), count: 1),
+                ],
+            ),
+            award: (
+                recruits: ["spearman", "alchemist"],
+                renown: 21,
+            ),
+        ),
+        (
+            scenario: (
+                rocky_tiles_count: 0,
+                randomized_objects: [
+                    (owner: Some((1)), typename: "imp", line: Some(Front), count: 3),
+                    (owner: Some((1)), typename: "imp_bomber", line: Some(Back), count: 1),
+                    (owner: Some((1)), typename: "toxic_imp", line: Some(Middle), count: 2),
+                ],
+            ),
+            award: (
+                recruits: ["swordsman", "spearman", "alchemist"],
+                renown: 22,
+            ),
+        ),
+        (
+            scenario: (
+                rocky_tiles_count: 0,
+                randomized_objects: [
+                    (owner: Some((1)), typename: "imp", line: Some(Front), count: 3),
+                    (owner: Some((1)), typename: "imp_bomber", line: Some(Back), count: 1),
+                    (owner: Some((1)), typename: "toxic_imp", line: Some(Middle), count: 2),
+                    (owner: Some((1)), typename: "imp_summoner", line: Some(Back), count: 1),
+                ],
+            ),
+            award: (
+                renown: 100,
+            ),
+        ),
+    ],
+)

@@ -1,0 +1,328 @@
+#![enable(unwrap_newtypes)]
+
+{
+    "swordsman": [
+        Blocker(()),
+        Strength((
+            strength: 3,
+        )),
+        Agent((
+            moves: 1,
+            attacks: 1,
+            jokers: 1,
+            reactive_attacks: 1,
+            attack_distance: 1,
+            attack_strength: 2,
+            attack_accuracy: 4,
+            weapon_type: Slash,
+            move_points: 3,
+        )),
+        Abilities([(ability: Jump, status :Ready)]),
+    ],
+    "elite_swordsman": [
+        Blocker(()),
+        Strength((
+            strength: 4,
+        )),
+        Agent((
+            moves: 1,
+            attacks: 1,
+            jokers: 1,
+            reactive_attacks: 1,
+            attack_distance: 1,
+            attack_strength: 2,
+            attack_accuracy: 5,
+            weapon_type: Slash,
+            move_points: 3,
+        )),
+        Abilities([(ability: Jump, status :Ready),(ability: Rage, status :Ready),(ability: Dash, status :Ready)]),
+    ],
+    "heavy_swordsman": [
+        Blocker((
+            weight: Heavy,
+        )),
+        Strength((
+            strength: 6,
+        )),
+        Agent((
+            moves: 0,
+            attacks: 1,
+            jokers: 1,
+            reactive_attacks: 1,
+            attack_distance: 1,
+            attack_strength: 3,
+            attack_accuracy: 6,
+            weapon_type: Slash,
+            move_points: 2,
+        )),
+    ],
+    "alchemist": [
+        Blocker(()),
+        Strength((
+            strength: 3,
+        )),
+        Agent((
+            moves: 1,
+            attacks: 1,
+            jokers: 0,
+            reactive_attacks: 0,
+            attack_distance: 0,
+            attack_strength: 1,
+            attack_accuracy: 4,
+            weapon_type: Slash,
+            dodge: 1,
+            move_points: 3,
+        )),
+        Abilities([(ability: BombPush, status :Ready),(ability: Heal, status :Ready)]),
+    ],
+    "healer": [
+        Blocker(()),
+        Strength((
+            strength: 4,
+        )),
+        Agent((
+            moves: 1,
+            attacks: 0,
+            jokers: 1,
+            reactive_attacks: 0,
+            attack_distance: 0,
+            attack_strength: 1,
+            attack_accuracy: 4,
+            weapon_type: Slash,
+            dodge: 1,
+            move_points: 3,
+        )),
+        Abilities([(ability: BombPush, status :Ready),(ability: BombPoison, status :Ready),(ability: GreatHeal, status :Ready)]),
+    ],
+    "firer": [
+        Blocker(()),
+        Strength((
+            strength: 4,
+        )),
+        Agent((
+            moves: 0,
+            attacks: 1,
+            jokers: 1,
+            reactive_attacks: 0,
+            attack_distance: 0,
+            attack_strength: 1,
+            attack_accuracy: 4,
+            weapon_type: Slash,
+            dodge: 1,
+            move_points: 3,
+        )),
+        Abilities([(ability: BombPush, status :Ready),(ability: BombFire, status :Ready),(ability: Bomb, status :Ready)]),
+    ],
+    "hammerman": [
+        Blocker(()),
+        Strength((
+            strength: 4,
+        )),
+        Agent((
+            moves: 1,
+            attacks: 2,
+            jokers: 0,
+            reactive_attacks: 1,
+            attack_strength: 3,
+            attack_accuracy: 3,
+            attack_distance: 1,
+            weapon_type: Smash,
+            move_points: 3,
+        )),
+        Abilities([(ability: Knockback, status :Ready),(ability: Club, status :Ready)]),
+    ],
+    "heavy_hammerman": [
+        Blocker((
+            weight: Heavy,
+        )),
+        Strength((
+            strength: 6,
+        )),
+        Agent((
+            moves: 0,
+            attacks: 1,
+            jokers: 1,
+            reactive_attacks: 0,
+            attack_strength: 5,
+            attack_accuracy: 6,
+            attack_distance: 1,
+            weapon_type: Smash,
+            move_points: 2,
+        )),
+        Abilities([(ability: Knockback, status :Ready) ,(ability: Club, status :Ready)]),
+        PassiveAbilities([
+            HeavyImpact,
+        ]),
+    ],
+    "spearman": [
+        Blocker(()),
+        Strength((
+            strength: 3,
+        )),
+        Agent((
+            moves: 0,
+            attacks: 0,
+            jokers: 1,
+            reactive_attacks: 2,
+            attack_distance: 2,
+            attack_strength: 1,
+            attack_accuracy: 4,
+            weapon_type: Pierce,
+            move_points: 3,
+        )),
+        Abilities([(ability: LongJump, status :Ready)]),
+    ],
+    "elite_spearman": [
+        Blocker(()),
+        Strength((
+            strength: 4,
+        )),
+        Agent((
+            moves: 0,
+            attacks: 1,
+            jokers: 1,
+            reactive_attacks: 2,
+            attack_distance: 2,
+            attack_strength: 1,
+            attack_accuracy: 6,
+            weapon_type: Pierce,
+            dodge: 1,
+            move_points: 3,
+        )),
+        Abilities([(ability: LongJump, status :Ready)]),
+    ],
+    "heavy_spearman": [
+        Blocker((
+            weight: Heavy,
+        )),
+        Strength((
+            strength: 5,
+        )),
+        Agent((
+            moves: 0,
+            attacks: 0,
+            jokers: 1,
+            reactive_attacks: 2,
+            attack_distance: 2,
+            attack_strength: 2,
+            attack_accuracy: 6,
+            weapon_type: Pierce,
+            move_points: 2,
+        )),
+    ],
+    "imp": [
+        Blocker(()),
+        Strength((
+            strength: 3,
+        )),
+        Agent((
+            moves: 1,
+            attacks: 1,
+            jokers: 0,
+            reactive_attacks: 1,
+            attack_strength: 1,
+            attack_accuracy: 3,
+            attack_distance: 1,
+            weapon_type: Claw,
+            move_points: 3,
+        )),
+    ],
+    "toxic_imp": [
+        Blocker(()),
+        Strength((
+            strength: 2,
+        )),
+        Agent((
+            moves: 1,
+            attacks: 1,
+            jokers: 0,
+            reactive_attacks: 0,
+            attack_strength: 0,
+            attack_accuracy: 3,
+            attack_distance: 1,
+            weapon_type: Claw,
+            move_points: 3,
+        )),
+        PassiveAbilities([
+            PoisonAttack,
+        ]),
+    ],
+    "imp_bomber": [
+        Blocker(()),
+        Strength((
+            strength: 2,
+        )),
+        Agent((
+            moves: 1,
+            attacks: 1,
+            jokers: 0,
+            reactive_attacks: 0,
+            attack_strength: 1,
+            attack_accuracy: 2,
+            attack_distance: 1,
+            weapon_type: Claw,
+            move_points: 3,
+        )),
+        Abilities([(ability: BombDemonic, status :Ready)]),
+    ],
+    "imp_summoner": [
+        Blocker(()),
+        Strength((
+            strength: 7,
+        )),
+        Agent((
+            moves: 0,
+            attacks: 0,
+            jokers: 1,
+            reactive_attacks: 1,
+            attack_distance: 1,
+            attack_strength: 2,
+            attack_accuracy: 4,
+            weapon_type: Smash,
+            move_points: 3,
+        )),
+        Summoner((
+            count: 2,
+        )),
+        Abilities([(ability: Summon, status :Ready),(ability: Bloodlust, status :Ready)]),
+        PassiveAbilities([
+            HeavyImpact,
+            Regenerate,
+        ]),
+    ],
+    "boulder": [
+        Blocker((
+            weight: Heavy,
+        )),
+    ],
+    "bomb_damage": [
+        Blocker(()),
+    ],
+    "bomb_push": [
+        Blocker(()),
+    ],
+    "bomb_poison": [
+        Blocker(()),
+    ],
+    "bomb_fire": [
+        Blocker(()),
+    ],
+    "bomb_demonic": [
+        Blocker(()),
+    ],
+    "fire": [
+        PassiveAbilities([
+            Burn,
+        ]),
+    ],
+    "poison_cloud": [
+        PassiveAbilities([
+            Poison,
+        ]),
+    ],
+    "spike_trap": [
+        PassiveAbilities([
+            SpikeTrap,
+        ]),
+    ],
+}

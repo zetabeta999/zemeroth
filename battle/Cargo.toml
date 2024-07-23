@@ -1,0 +1,17 @@
+[package]
+name = "battle"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ron = "0.8.1"
+derive_more = { version = "0.99", features = ["from"] }
+num = { version = "0.4", default-features = false }
+serde.workspace = true
+risc0-zkvm.workspace = true 
+serde_json.workspace = true
+
+[features]
+default = []
+event = []
+debug = []
